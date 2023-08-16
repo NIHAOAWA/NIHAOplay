@@ -1,3 +1,5 @@
+//@2023 NIHAOplay Dev Group.By NIHAO.
+
 # 简介
 
 这是一款你好开发的游戏，为了方便大家娱乐。
