@@ -1,4 +1,4 @@
-//@2023 NIHAOplay Dev Group.By NIHAO.
+*@2023 NIHAOplay Dev Group.By NIHAO.
 
 # 简介
 
