@@ -1,3 +1,5 @@
+//NIHAOplay站长管理系统
+//未完善，你好还正在编写中
 #include<iostream>
 using namespace std;
 int adminspeak,more;
