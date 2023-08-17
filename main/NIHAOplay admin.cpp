@@ -7,7 +7,7 @@ int admin_user;
 int main(){
 	cout<<"2023 NIHAOplay 1.0.0版本后台管理系统。欢迎站长到访"<<endl;
 	cout<<"请问站长有何贵干1.查看更新日志 2.查看更多信息 3.系统管理(adminastor)4.版权协议"<<endl;
-    cout<<"注意事项：请牢记版权协议谨防侵权！！！"
+        cout<<"注意事项：请牢记版权协议谨防侵权！！！"
 	cin>>adminspeak;
     if(adminspeak==1){
     	cout<<"@2023 NIHAOplay更新日志"<<endl;
