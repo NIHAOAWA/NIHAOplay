@@ -4,10 +4,12 @@ using namespace std;
 int adminspeak,more;
 int adminastor;
 int admin_user;
+int specialthank;
+int friendlist;
 int main(){
-	cout<<"2023 NIHAOplay 1.0.0版本后台管理系统。欢迎站长到访"<<endl;
-	cout<<"请问站长有何贵干1.查看更新日志 2.查看更多信息 3.系统管理(adminastor)4.版权协议"<<endl;
-        cout<<"注意事项：请牢记版权协议谨防侵权！！！"
+	cout<<"2023 NIHAOplay 1.0.0版本后台管理站长系统。欢迎站长到访"<<endl;
+	cout<<"请问站长有何贵干1.查看更新日志 2.查看更多信息 3.系统管理(adminastor)4.版权协议 5.代码贡献者 6.友情链接"<<endl;
+    cout<<"注意事项：请牢记版权协议谨防用户侵权！！！"<<endl;
 	cin>>adminspeak;
     if(adminspeak==1){
     	cout<<"@2023 NIHAOplay更新日志"<<endl;
@@ -47,5 +49,28 @@ int main(){
     }
     if(adminspeak==4){
         cout<<"版权提示：本产品本项目许可证为 Apache-2.0，如果用户要使用或改编，请在首页明确标注“本网站基于NIHAOplay”，注意要注明本仓库的链接"<<endl;
+    }
+    if(adminspeak==5){
+        cout<<"代码贡献者：你好 是否查看查看特殊感谢？1.是2.否"<<endl;
+        cin>>specialthank;
+        if(specialthank==1){
+            cout<<"PiationESL与质子对本产品提供了支持，感谢他们！"<<endl;
+        }
+        if(specialthank==2){
+            cout<<"好的，本系统会完全遵照于您-站长的决定"<<endl;
+        }
+    }
+    if(adminspeak==6){
+        cout<<"友情链接由于牵涉其他链接 所以系统在这里跳转提示是否查看？1.查看 2.不查看"<<endl;
+        cin>>friendlist;
+        if(friendlist==1){
+            cout<<"友情链接"<<endl;
+            cout<<"你好的GitHub地址：https://github.com/NIHAOAWA"<<endl;
+            cout<<"PiationESL的GitHub地址：https://github.com/thepiationesl"<<endl;
+            cout<<"质子的GitHub地址：https://github.com/zhiziqixingdeng"<<endl;
+        }
+        if(friendlist==2){
+            cout<<"好的，我将继续遵照您-站长的意愿，您的意愿是本系统服务的宗旨"<<endl;
+        }
     }
 }
