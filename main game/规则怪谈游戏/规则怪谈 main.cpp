@@ -62,8 +62,7 @@ int main(){
                 this_thread::sleep_for(chrono::seconds(5));
                 cout<<"你s了，快等待你好开发完商店后买复活机会吧... 或者重新开始？"<<endl;
                 cout<<"广告（每次s时都有）：https://githubfast.com/zhiziqixingdeng/zhizi-game"<<endl;
-            }
-            
+            }            
         }
     }
 }
