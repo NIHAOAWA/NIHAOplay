@@ -1,78 +1,69 @@
-#include <iostream>
-#include <string>
+//定义头文件
+#include<iostream>
+#include <chrono>
+#include <thread>
+#include <unistd.h>//这个我Mac我这么写，你们windows用cstdlib就行啦
 using namespace std;
-
-struct UserInput {
-    int report;
-    int sleepTime;
-    int doorOpen;
-    int doorOpenAtNight;
-    int ignoreMom;
-};
-
-int main() {
-    while (true) {
-        cout << "欢迎来到怪谈规则游戏！" << endl;
-        cout << "您是否现在使用报告功能？ 1.是  2.否" << endl;
-
-        UserInput userInput;
-        cin >> userInput.report;
-
-        if (userInput.report == 1) {
-            cout << "请提供报告的相关信息：" << endl;
-            // 处理报告逻辑
-        }
-
-        cout << "游戏正在加载..." << endl;
-        cout << "游戏开始！您被困在一个神秘的地方，周围一片黑暗。" << endl;
-        cout << "您需要遵守以下规则才能生存下去：" << endl;
-        cout << "1. 晚上 " << userInput.sleepTime << " 点前必须入睡" << endl;
-        cout << "2. 不要给陌生人开门" << endl;
-        cout << "3. 晚上睡觉时，不能打开房门" << endl;
-        cout << "4. 如果晚上听到妈妈在叫你，不要理会" << endl;
-        cout << "5. 您如想结束游戏，关闭窗口即可" << endl;
-
-        UserInput userRules;
-        userRules.sleepTime = 23;  
-        userRules.doorOpen = 2;    
-        userRules.doorOpenAtNight = 3;  
-        userRules.ignoreMom = 4;   
-
-        // 检查用户是否违反规则
-        if (userRules.sleepTime >= 23) {
-            cout << "您入睡时间违反规则！您已经死亡。游戏结束。" << endl;
-            break;
-        }
-
-        if (userRules.doorOpen == 1) {
-            cout << "您给陌生人开门违反规则！您已经死亡。游戏结束。" << endl;
-            break;
-        }
-
-        if (userRules.doorOpenAtNight == 1) {
-            cout << "您晚上打开房门违反规则！您已经死亡。游戏结束。" << endl;
-            break;
-        }
-
-        if (userRules.ignoreMom == 1) {
-            cout << "您忽略妈妈的叫声违反规则！您已经死亡。游戏结束。" << endl;
-            break;
-        }
-
-        cout << "您需要探索周围的环境，寻找线索和道具，以便在这个恐怖的地方生存下去。" << endl;
-
-        bool isSleeping = false;
-
-        while (!isSleeping) {
-            string playerInput;
-            cout << "请输入您的行动：";
-            cin >> playerInput;
-            if (playerInput == "入睡" || playerInput == "睡觉" || playerInput == "睡眠") {
-                isSleeping = true;
-                cout << "您正在入睡..." << endl;
-                cout << "您已入睡。" << endl;
-            } else {
-                cout << "您还不能入睡，请继续探索周围的环境。" << endl;
+int user;
+int main(){
+    cout<<"欢迎来到NIHAOPlay-规则怪谈"<<endl;
+    cout<<"您要干什么 1.商店（开发中） 2.开始游戏"<<endl;
+//最近你好在构思咋写外挂
+    cin>>user;
+//shi山代码
+    if(user==1){
+        cout<<"你好正在写游戏，现在不写这个"<<endl;
+    }
+    if(user==2){
+        while(true){
+            cout<<"游戏开始 game looading..."<<endl;
+            cout<<"你醒来，发现桌子上有一张纸条，你要打开吗 1.开 2.不开"<<endl;
+            cin>>user;
+            if(user==2){
+                cout<<"规则里有，必须打开，违反规则将会在5秒后被抹杀，请等待5秒后的s时间..."<<endl;
+                this_thread::sleep_for(chrono::seconds(5));
+                cout<<"你s了，快等待你好开发完商店后买复活机会吧... 或者重新开始？"<<endl;
+                cout<<"广告（每次s时都有）：https://githubfast.com/zhiziqixingdeng"<<endl;
+                break;
             }
+            if(user==1){
+                cout<<"[1.请在上午9点时喂猫]"<<endl;
+                cout<<"[2.必须打开本纸条]"<<endl;
+                cout<<"[3.更多规则你好构思中，请等待]"<<endl;
+                cout<<"温馨提示 是否清屏（只有一个哦）1.清屏 除了1外的其他数字就是继续运行awa"<<endl;
+                cin>>user;
+                if(user==1){
+                    system("clear");//我Mac的写法，你们windows就用system("cls")就行
+                    cout<<"你真傻，待会规则忘记了可别来找你好"<<endl;
+                }
+            }
+            cout<<"现在你要看一下闹钟时间吗 1.要 2.不要"<<endl;
+            cin>>user;
+            if(user==1){
+                cout<<"现在的时间是上午9点钟..."<<endl;
+                cout<<"你要干什么？1.愣着 2.喂猫"<<endl;
+                cin>>user;
+                if(user==1){
+                    cout<<"猫咪扑了过来。你被它弄s了。因为它是zhizi猫，不是普通猫"<<endl;
+                    cout<<"请等待5秒后的s时间"<<endl;
+                    this_thread::sleep_for(chrono::seconds(5));
+                    cout<<"你s了，快等待你好开发完商店后买复活机会吧... 或者重新开始？"<<endl;
+                    cout<<"广告（每次s时都有）：https://githubfast.com/zhiziqixingdeng/zhizi-game"<<endl;
+                    break;
+                }
+                if(user==2){
+                    cout<<"你喂了猫，游戏继续"<<endl;
+                }
+            }
+            if(user==2){
+                cout<<"你没有看闹钟，你不知道现在是上午9点，你没有喂猫"<<endl;
+                cout<<"这时猫咪冲向了你，要把你咬死。你问它你这只猫怎么能杀人呢"<<endl;
+                cout<<"原来这不是一只普通的猫，这时zhizi猫，它杀死了你"<<endl;
+                this_thread::sleep_for(chrono::seconds(5));
+                cout<<"你s了，快等待你好开发完商店后买复活机会吧... 或者重新开始？"<<endl;
+                cout<<"广告（每次s时都有）：https://githubfast.com/zhiziqixingdeng/zhizi-game"<<endl;
+            }
+            
         }
-
+    }
+}
