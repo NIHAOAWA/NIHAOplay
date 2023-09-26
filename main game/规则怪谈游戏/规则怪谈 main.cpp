@@ -2,13 +2,12 @@
 #include<iostream>
 #include <chrono>
 #include <thread>
-#include <unistd.h>//这个我Mac我这么写，你们windows用cstdlib就行啦
+#include <stdio.h>//这个我Mac我这么写，你们windows用cstdlib就行啦
 using namespace std;
 int user;
 int main(){
     cout<<"欢迎来到NIHAOPlay-规则怪谈"<<endl;
-    cout<<"您要干什么 1.商店（开发中） 2.开始游戏"<<endl;
-//最近你好在构思咋写外挂
+    cout<<"您要干什么 1.商店（开发中） 2.开始游戏)"<<endl;
     cin>>user;
 //shi山代码
     if(user==1){
@@ -33,8 +32,7 @@ int main(){
                 cout<<"温馨提示 是否清屏（只有一个哦）1.清屏 除了1外的其他数字就是继续运行awa"<<endl;
                 cin>>user;
                 if(user==1){
-                    system("clear");//我Mac的写法，你们windows就用system("cls")就行
-                    cout<<"你真傻，待会规则忘记了可别来找你好"<<endl;
+                    system("clear");//我Mac的写法，你们windows就用system("cls")就行                    
                 }
             }
             cout<<"现在你要看一下闹钟时间吗 1.要 2.不要"<<endl;
@@ -53,6 +51,11 @@ int main(){
                 }
                 if(user==2){
                     cout<<"你喂了猫，游戏继续"<<endl;
+                    cout<<"这时候，你妈妈进了你的房间"<<endl;
+                    cin>>user;
+                    if(user==1){
+                        cout<<1<<endl;
+                    }
                 }
             }
             if(user==2){
@@ -63,7 +66,7 @@ int main(){
                 cout<<"你s了，快等待你好开发完商店后买复活机会吧... 或者重新开始？"<<endl;
                 cout<<"广告（每次s时都有）：https://githubfast.com/zhiziqixingdeng/zhizi-game"<<endl;
                 break;
-            }            
+            }           
         }
     }
 }
