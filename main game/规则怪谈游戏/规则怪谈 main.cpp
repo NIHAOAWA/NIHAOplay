@@ -1,4 +1,3 @@
-//定义头文件
 #include<iostream>
 #include <chrono>
 #include <thread>
@@ -51,10 +50,14 @@ int main(){
                 }
                 if(user==2){
                     cout<<"你喂了猫，游戏继续"<<endl;
-                    cout<<"这时候，你妈妈进了你的房间"<<endl;
+                    cout<<"这时候，电话响了起来"<<endl;
+                    cout<<"他说这有高薪工作 你要去吗1去2不去"<<endl;
                     cin>>user;
                     if(user==1){
-                        cout<<1<<endl;
+                        cout<<"你s了"<<endl;
+                        this_thread::sleep_for(chrono::seconds(5));
+                        cout<<"公益广告：他们是缅北诈骗犯 防诈骗从我做起"<<endl;
+                        break;
                     }
                 }
             }
