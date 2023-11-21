@@ -71,6 +71,50 @@ int main() {
                         this_thread::sleep_for(chrono::seconds(5));
                         cout << "公益广告：他们是缅北诈骗犯，防诈骗从我做起" << endl;
                     }
+                    else if (user == 2) {
+                        cout<<"你挂断了电话"<<endl;
+        cout << "你在房间里发现了一把钥匙" << endl;
+        cout << "你要拿起钥匙吗？1.拿起 2.不拿" << endl;
+        cin >> user;
+
+        if (user == 1) {
+            cout << "你拿起了钥匙，发现它可以解锁门" << endl;
+            cout << "你要去开门吗？1.去开门 2.不去" << endl;
+            cin >> user;
+
+            if (user == 1) {
+                cout << "你打开了门，突然进入了另一个世界..." << endl;
+                this_thread::sleep_for(chrono::seconds(5));
+                cout << "你发现自己处于一个神秘的迷宫之中。你要选择往哪个方向前进？" << endl;
+                cout << "1.向前走 2.向左转 3.向右转 4.掉头" << endl;
+                cin >> user;
+
+                if (user == 1) {
+                    cout << "你继续沿着前方走，迷宫越来越复杂，你感到晕眩..." << endl;
+                }
+                else if (user == 2) {
+                    cout << "你向左转并走了一段路，迷宫变得更加神秘..." << endl;
+                }
+                else if (user == 3) {
+                    cout << "你向右转并走了一段路，迷宫变得更加阴森..." << endl;
+                }
+                else if (user == 4) {
+                    cout << "你掉头朝相反的方向走，发现自己回到了起点..." << endl;
+                }
+                cout << "敬请期待更多剧情..." << endl;
+            }
+            else if (user == 2) {
+                cout << "你决定不去开门，继续探索房间" << endl;
+                this_thread::sleep_for(chrono::seconds(5));
+                cout << "敬请期待更多剧情..." << endl;
+            }
+        }
+        else if (user == 2) {
+            cout << "你不拿钥匙，继续探索房间" << endl;
+            this_thread::sleep_for(chrono::seconds(5));
+            cout << "敬请期待更多剧情..." << endl;
+        }
+    }
                 }
             }
             else if (user == 2) {
